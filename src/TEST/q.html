@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        const a = 1;
-        let value = [1, 2, 3, 4, 5];
-        value.reverse();
-        console.log(value);
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
 
 </body>
+<script>
+ let string = "0-394;1-498;2-575;3-576;4-486;5-360;6-259;7-189;8-137;9-130;10-193;11-292;12-393;13-490;14-564;15-574;16-498;17-373;18-264;19-186;20-126;21-104;22-151;23-247"
+ string = string.split(";")
+ console.log(string)
+ let res = [];
+    for (let i = 0; i < 8; i++) {
+        res.push({})
+    }
+    string.forEach(item => {
+        let arr = item.split("-")
+        let hour = parseInt(arr[0])
+        let value = parseInt(arr[1])
+        let count = Math.floor(hour / 8);
+
+        res[hour % 8][`hour_${count}`] = hour;
+        res[hour % 8][`value_${count}`] = value;
+
+    })
+    console.table(res)
+
+</script>
+
 </html>
