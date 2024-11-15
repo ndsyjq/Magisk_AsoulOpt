@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    var box=document.getElementById("div1");
+    var num=0;
+    box.onclick=function(){
+        if(num%2===0){
+            box.style.width="400px";
+            box.style.height="400px";}
+        else {box.style.width="100px";
+            box.style.height="100px";}
+        num++;
+    }
+    </script>
+</head>
+<body>
+
+        <div id="div1" style="width:100px;height:100px;border:solid;">
+            点我改变大小
+
+        </div>
+</body>
+</html>
