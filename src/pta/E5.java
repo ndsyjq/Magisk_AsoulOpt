@@ -5,21 +5,27 @@ import java.util.Scanner;
 public class E5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-       double a = sc.nextDouble();
-       double b = sc.nextDouble();
-       if (a>=0&&a<=23){
-           if (a>=5&&a<22&&b>3){
-               System.out.print("共花费");
-               System.out.printf("%.2f",(b-3)*2+8);
-           }
-           else if (a<5||a>=22&&b>3){
-                System.out.print("共花费");
-               System.out.printf("%.2f",(b-3)*(2*1.3)+8);
-           }else {
-               System.out.println("共花费8元");
-           }
-       }else {
-           System.out.println("时间错误");
-       }
+        int n = sc.nextInt();
+        int a=0;
+        int b=0;
+        double avg=0;
+        int a1=0;
+        int b2=101;
+        for (int i = 0; i < n; i++) {
+            int c = sc.nextInt();
+            int d = sc.nextInt();
+            avg=avg+d;
+            if(d>b){
+                b=d;
+                a=c;
+            }
+            if(d<b2){
+                b2=d;
+                a1=c;
+            }
+        }
+        System.out.println(a+" "+b);
+        System.out.println(a1+" "+b2);
+        System.out.printf("%.1f",avg/n);
     }
 }

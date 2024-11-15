@@ -13,6 +13,8 @@ public class A {
             stack.push(i);
         }
         String [][]day=new String[1000][1000];
+        String o=" 666";
+
         for (int i = 0; i < M; i++) {
             int x = sc.nextInt();
             String x1=sc.next();
@@ -23,6 +25,7 @@ public class A {
                 ans.append(x1).append(" ").append(y).append(" ").append(z);
 //                day[x]=ans.toString();
             }
+
 
 
         }
